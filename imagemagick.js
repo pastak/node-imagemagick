@@ -178,10 +178,10 @@ exports.identify = function(pathOrArgs, callback) {
 exports.identify.path = 'identify';
 
 function ExifDate(value) {
-  // YYYY:MM:DD HH:MM:SS -> Date(YYYY-MM-DD HH:MM:SS +0000)
+  // YYYY:MM:DD HH:MM:SS -> Date(YYYY-MM-DD HH:MM:SS +0900)
   value = value.split(/ /);
   return new Date(value[0].replace(/:/g, '-')+' '+
-    value[1]+' +0000');
+    value[1]+' +0900');
 }
 
 function exifKeyName(k) {
